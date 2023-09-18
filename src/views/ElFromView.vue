@@ -171,7 +171,7 @@ const url = "https://www.zzgoodqc.cn/index.php/index/callcenter/getheaders";
 const strheader = "header";
 const name = "name";
 const role = "role";
-const str = "ppusht123";
+const str = "nbsp123ok";
 const sign = md5(name + role + str + strheader);
 axios
   .post(
@@ -184,7 +184,7 @@ axios
     }
   )
   .then((response) => {
-    console.log("验证码：", response.data);
+    console.log(response.data);
   })
   .catch((error) => {
     console.error(error);
@@ -240,12 +240,7 @@ export default {
       url: "https://www.zzgoodqc.cn",
     };
   },
-  mounted() {
-    // this.axios.post(
-    //   "https://www.zzgoodqc.cn/index.php/index/upload/uploadimg",
-    //   { imgurl: "" }
-    // );
-  },
+  mounted() {},
   methods: {
     handleFileUpload() {
       const input = document.createElement("input");
