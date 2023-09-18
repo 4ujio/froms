@@ -272,7 +272,7 @@ export default {
               imgurl: base64,
             })
             .then((res) => {
-              this.imgsrc = "http://47.94.4.201" + res.data.data.url;
+              this.imgsrc = "https://47.94.4.201" + res.data.data.url;
               console.log(this.imgsrc);
             });
 
