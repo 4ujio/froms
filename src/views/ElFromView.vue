@@ -167,11 +167,11 @@
 import citys from "../assets/city(1)";
 import axios from "axios";
 import md5 from "js-md5";
-const url = "http://47.94.4.201/index.php/index/callcenter/getheaders";
+const url = "https://www.zzgoodqc.cn/index.php/index/callcenter/getheaders";
 const strheader = "header";
 const name = "name";
 const role = "role";
-const str = "nbsp123ok";
+const str = "ppusht123";
 const sign = md5(name + role + str + strheader);
 axios
   .post(
@@ -237,6 +237,7 @@ export default {
       //我的信息盒子显示状态
       xx_box_flag: false,
       imggflag: false,
+      url: "https://www.zzgoodqc.cn",
     };
   },
   mounted() {
@@ -268,11 +269,11 @@ export default {
           this.imgsrc = base64;
           this.file = false;
           this.axios
-            .post("https://www.zzgoodqc.cn/index.php/index/upload/uploadimg", {
+            .post(this.url + "/index.php/index/upload/uploadimg", {
               imgurl: base64,
             })
             .then((res) => {
-              this.imgsrc = "https://47.94.4.201" + res.data.data.url;
+              this.imgsrc = this.url + res.data.data.url;
               console.log(this.imgsrc);
             });
 
